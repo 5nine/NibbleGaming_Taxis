@@ -3,7 +3,7 @@
 _cab 		= _this select 0;
 _dir 		= _this select 1;
 _cabDriver 	= _this select 2;
-
+_cabGroup 	= group _cabDriver;
 
 _cab call EPOCH_server_setVToken;
 _cab setVariable["LOCK_OWNER", "-1"];
