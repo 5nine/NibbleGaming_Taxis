@@ -3,8 +3,9 @@
 ## Install Instructions:
 
 1. Copy folder "Taxis" to your mission folder (or inside your mission.pbo)
-2. Copy "NibbleGaming_Taxis.pbo" to your "@epochhive\addons" folder.
-3. read "add to.txt" and insert those parts to init.sqf, description.ext and mission.sqm (all located within your missionfolder or mission.pbo)
+2. Compile a pbo from folder "NibbleGaming_Taxis" with the same name.
+3. Copy "NibbleGaming_Taxis.pbo" to your "@epochhive\addons" folder.
+4. read "add to.txt" and insert those parts to init.sqf, description.ext and mission.sqm (all located within your missionfolder or mission.pbo)
 
 ## Infistar:
 
