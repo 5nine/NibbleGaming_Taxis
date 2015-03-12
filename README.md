@@ -2,19 +2,19 @@
 
 ## Install Instructions:
 
-1. Copy folder "Taxis" to your mission folder (or inside your mission.pbo)
-2. Compile a pbo from folder "NibbleGaming_Taxis" with the same name.
-3. Copy "NibbleGaming_Taxis.pbo" to your "@epochhive\addons" folder.
+1. Copy folder `Taxis` to your mission folder (or inside your mission.pbo)
+2. Compile a pbo from folder `NibbleGaming_Taxis` with the same name.
+3. Copy `NibbleGaming_Taxis.pbo` to your `@epochhive\addons` folder.
 4. Follow the instructions below
 
-add this to the bottom of your init.sqf
+Add this to the bottom of your `init.sqf`:
 
 ```sqf
 if(isDedicated)exitWith{};
 [] execVM "Taxis\player_cab.sqf";
 ```
 
-Add this to the bottom of your description.ext
+Add this to the bottom of your `description.ext`:
 ```sqf
 class CfgNotifications
         {
@@ -30,7 +30,7 @@ class CfgNotifications
         };
 ```
 
-Add this to your mission.sqm below the end }; of "class Markers"
+Add this to your `mission.sqm` below the closing curly bracket (`};`) of `class Markers`:
 
 ```sqf
     class Sensors {
@@ -82,7 +82,7 @@ Add this to your mission.sqm below the end }; of "class Markers"
 
 ## Infistar:
 
-In run.sqf, make sure these config options are set as followed:
+In `run.sqf`, make sure these config options are set as followed:
 
 ```sqf
 /*  Notification check   */ _UNC = false;
@@ -101,6 +101,6 @@ _UVC = false;
 
 ## Optional config:
 
-- inside "Taxis" folder, edit chatter_cab*.sqf to your liking, those are the chatmessages from the driver.
-- dePbo "NibbleGaming_Taxis.pbo" and edit each cab*_init.sqf to customize spawnpositions, destinations and so on. 
-- If you changed positions in the step above, you also need to edit each position in mission.sqm so that it corresponds with positions with each cab. This is needed so the players get the addaction at the correct location. 
+- inside `Taxis` folder, `edit chatter_cab*.sqf` to your liking, those are the chatmessages from the driver.
+- dePbo `NibbleGaming_Taxis.pbo` and edit each `cab*_init.sqf` to customize spawnpositions, destinations and so on. 
+- If you changed positions in the step above, you also need to edit each position in `mission.sqm` so that it corresponds with positions with each cab. This is needed so the players get the addaction at the correct location. 
