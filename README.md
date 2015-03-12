@@ -1,4 +1,6 @@
-# NibbleGaming Taxis for Arma 3: Epoch, by Fivenine
+# NibbleGaming Taxis for Arma 3: Epoch
+
+Epochmod forum post: http://epochmod.com/forum/index.php?/topic/32340-release-taxi-script/
 
 ## Install Instructions:
 
