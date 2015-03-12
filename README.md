@@ -13,13 +13,13 @@ In run.sqf, make sure these config options are set as followed:
 ```sqf
 /*  Notification check   */ _UNC = false;
 
-/*  HandleDamage check   */ _HDC = false;	(perhaps not needed because it only applies to driver, which is serverside)
-/*  Remove Hit Handler   */ _REH = false;	(perhaps not needed because it only applies to driver, which is serverside)
-/*  Revert HandleDamage  */ _RHD = false;	(perhaps not needed because it only applies to driver, which is serverside)
+/*  HandleDamage check   */ _HDC = false;	//perhaps not needed because it only applies to driver, which is serverside
+/*  Remove Hit Handler   */ _REH = false;	//perhaps not needed because it only applies to driver, which is serverside
+/*  Revert HandleDamage  */ _RHD = false;	//perhaps not needed because it only applies to driver, which is serverside
 
 /*  Remove Action Plrs   */ _OAP = false;
 /*  Remove Action Objs   */ _OAO = false;
-/*  Use Anti Teleport    */ _UAT = false;  	(can probably be true, but if server lags the taxi jumps a bit, which can be mistaken for teleport)
+/*  Use Anti Teleport    */ _UAT = false;  	//can probably be true, but if server lags the taxi jumps a bit, which can be mistaken for teleport
 
 /*  Check Local Markers  */ _CLM = false;
 _UVC = false;
