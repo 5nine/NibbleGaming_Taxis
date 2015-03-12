@@ -29,4 +29,5 @@ _UVC = false;
 ## Optional config:
 
 - inside "Taxis" folder, edit chatter_cab*.sqf to your liking, those are the chatmessages from the driver.
-- dePbo "NibbleGaming_Taxis.pbo" and edit each cab*_init.sqf to customize spawnpositions, destinations and so on.
+- dePbo "NibbleGaming_Taxis.pbo" and edit each cab*_init.sqf to customize spawnpositions, destinations and so on. 
+- If you changed positions in the step above, you also need to edit each position in mission.sqm so that it corresponds with positions with each cab. This is needed so the players get the addaction at the correct location. 
