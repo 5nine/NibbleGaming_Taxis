@@ -15,6 +15,7 @@ _cabDriver enableAI "FSM";
 _cabDriver setCombatMode "RED";
 _cabDriver setBehaviour "COMBAT";
 _cabDriver addVest "V_Press_F";
+_cabDriver setSkill 1;
 _cabDriver addMagazines ["11Rnd_45ACP_Mag", 3];
 _cabDriver addWeapon "hgun_Pistol_heavy_01_F";
 _cabDriver addHandgunItem "optic_MRD";
@@ -30,6 +31,7 @@ fnc_backupunit = {
 	(_this select 0) enableAI "MOVE";
 	(_this select 0) enableAI "ANIM";
 	(_this select 0) enableAI "FSM";
+	(_this select 0) setskill 1;
 	(_this select 0) allowDammage true;
 	removeUniform 		(_this select 0);
 	removeHeadgear 		(_this select 0);
