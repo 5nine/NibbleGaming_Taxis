@@ -9,7 +9,7 @@ publicVariable "cab3occupied";
 
 diag_log "#NibbleGaming Taxis: Published client variables";
 
-"Callcab" addPublicVariableEventHandler {
+"getcab" addPublicVariableEventHandler {
 	if ((_this select 1) == ("Cab1")) then {
 	[] execVM "x\addons\Nibble\cab1_init.sqf";
 	};

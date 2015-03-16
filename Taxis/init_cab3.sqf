@@ -5,8 +5,8 @@ if (cab3occupied) then {
 ["cabtext",["Currently occupied, please try again in moment"]] call bis_fnc_showNotification; 
 } else {
 ["cabtext",["Calling for cab, it should arrive shortly"]] call bis_fnc_showNotification; 
-callcab = "cab3";
-publicVariableServer "callcab";
+getcab = "cab3";
+publicVariableServer "getcab";
 //	if (isNil "gotcabinit") then {
 //	[] execVM "Taxis\player_cab.sqf";
 //	};
