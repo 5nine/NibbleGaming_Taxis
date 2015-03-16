@@ -13,6 +13,7 @@ Add this to the bottom of your `init.sqf`:
 
 ```sqf
 if(isDedicated)exitWith{};
+cabcost = 50; //change this to change to cost of the cab
 [] execVM "Taxis\player_cab.sqf";
 ```
 
