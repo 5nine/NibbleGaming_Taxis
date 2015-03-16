@@ -4,7 +4,6 @@ private ["_gotIn","_cab"];
 _cab = _this select 0;
 _gotIn = _this select 2;
 
-
 if (_gotIn == player) then {
 player removeaction addcab;
 //get destination positions and names
@@ -102,12 +101,13 @@ chosen = false;
 	addpay = _cab addaction ["<t color='#FFFF00'>Pay the driver 50 krypto</t>",{
 				_alreadypaid = (_this select 0) getvariable "plyrpaid";
 				if (!_alreadypaid) then {
-					if (EPOCH_playerCrypto > 49) then {
-						EPOCH_playerCrypto = EPOCH_playerCrypto -50; 
+					if (EPOCH_playerCrypto >= cabcost) then {
+						EPOCH_playerCrypto = EPOCH_playerCrypto - cabcost; 
 						(_this select 0) setVariable ["plyrpaid", true, true];
 						systemchat chatter_paysuccess; 
 						(_this select 0) removeaction addpay;
-						["cabtext",["You payed driver 50 krypto"]] call bis_fnc_showNotification; 
+						_notifypayed = format ["You payed driver %1 krypto", cabcost];
+						["cabtext",[_notifypayed]] call bis_fnc_showNotification; 
 					} else {
 						["cabtext",["You haven't got enough krypto"]] call bis_fnc_showNotification; 
 						systemchat chatter_payfail; 
@@ -123,7 +123,8 @@ chosen = false;
 	chosen = false;
 	uiSleep 10;
 	if (gotout) exitwith {};
-	["cabtext",["Taxis cost 50 krypto"]] call bis_fnc_showNotification; 
+	_notifycost = format ["Taxis cost %1 krypto", cabcost];
+	["cabtext",[_notifycost]] call bis_fnc_showNotification; 
 	systemchat chatter_gen1;
 	};
 	uiSleep 10;
